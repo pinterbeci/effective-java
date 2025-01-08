@@ -1,5 +1,9 @@
 package chapter1.item2;
 
+//immutable class, one instance will be creating cause of builder pattern
+//using a singleton class, this recommended to use this pattern
+//repeated invocation, but same object that is static factory methods are helpful, improve performance
+//static factory method != Factory Design Pattern (!!!!!)
 public class NutritionFacts {
     //required parameters
     private final int servingSize;
