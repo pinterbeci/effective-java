@@ -1,0 +1,14 @@
+Singleton class:
+ - simply class that is initiated exactly ones
+ - Testing a Singleton class is difficult, because globally one instance created,
+        the test is unpredictable and changing the original instance state (avoid that)
+ - Testing a Singleton: "implements an interface that serves as its type", there is a solution
+
+
+ Create a Singleton:
+  - SingletonCreationWithFinalField.INSTANCE:
+        * with a public static field, which call the private constructor one time
+  - Using reflection the private constructor is accessible one more time, this will be an attack
+     (throws an exception if created the second instance)
+  - SingletonCreationWithStaticMethod.getInstance() static method
+  - SingletonCreationWithEnum single valued enum, like a singleton

@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class NyPizza extends Pizza {
 
-    private enum Size { SMALL, MEDIUM, LARGE }
+    public enum Size {SMALL, MEDIUM, LARGE}
 
     private final Size size;
 

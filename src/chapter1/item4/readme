@@ -1,0 +1,2 @@
+ - A class will be noninstantiated by private constructor
+ - The class will never instantiated

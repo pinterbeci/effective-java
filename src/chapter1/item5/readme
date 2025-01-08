@@ -1,0 +1,6 @@
+The dependency is an object/resource, that it defined another object (holder);
+
+Pass the resource or the dependency into the the constructor when
+    creating a new instance --> this is the dependency injection
+
+Dependency Injection Framework: Spring, Dagger, Guice
