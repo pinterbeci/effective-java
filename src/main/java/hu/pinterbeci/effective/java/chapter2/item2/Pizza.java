@@ -1,18 +1,19 @@
-package chapter1.item2;
+package hu.pinterbeci.effective.java.chapter2.item2;
 
 import java.util.EnumSet;
 import java.util.Objects;
 import java.util.Set;
 
+// Builder pattern for class hierarchies
 public abstract class Pizza {
-    public enum Topping { HAM, MUSHROOM, ONION, PEPPER, SAUSAGE }
+    public enum Topping {HAM, MUSHROOM, ONION, PEPPER, SAUSAGE}
 
     final Set<Topping> toppings;
 
     abstract static class Builder<T extends Builder<T>> {
-        final EnumSet<Topping> toppings = EnumSet.noneOf(Topping.class);
+        EnumSet<Topping> toppings = EnumSet.noneOf(Topping.class);
 
-        public T addTopping(final Topping topping) {
+        public T addTopping(Topping topping) {
             toppings.add(Objects.requireNonNull(topping));
             return self();
         }

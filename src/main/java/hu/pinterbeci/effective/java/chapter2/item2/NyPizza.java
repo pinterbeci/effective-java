@@ -1,10 +1,10 @@
-package chapter1.item2;
+package hu.pinterbeci.effective.java.chapter2.item2;
 
 import java.util.Objects;
 
 public class NyPizza extends Pizza {
 
-    private enum Size { SMALL, MEDIUM, LARGE }
+    public enum Size {SMALL, MEDIUM, LARGE}
 
     private final Size size;
 
@@ -29,6 +29,10 @@ public class NyPizza extends Pizza {
 
     private NyPizza(Builder builder) {
         super(builder);
-        size = builder.size;
+        this.size = builder.size;
+    }
+
+    public Size getSize() {
+        return size;
     }
 }

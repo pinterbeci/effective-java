@@ -1,15 +1,12 @@
-package chapter1.item2;
+package hu.pinterbeci.effective.java.chapter2.item2;
 
 public class Calzone extends Pizza {
-
     private final boolean sauceInside;
-
     public static class Builder extends Pizza.Builder<Builder> {
-        private boolean sauceInside = false;
+        private final boolean sauceInside;
 
-        public Builder sauceInside() {
-            sauceInside = true;
-            return this;
+        public Builder(boolean sauceInside) {
+            this.sauceInside = sauceInside;
         }
 
         @Override
@@ -22,8 +19,9 @@ public class Calzone extends Pizza {
             return this;
         }
     }
+
     private Calzone(Builder builder) {
         super(builder);
-        sauceInside = builder.sauceInside;
+        this.sauceInside = builder.sauceInside;
     }
 }
