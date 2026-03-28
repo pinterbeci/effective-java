@@ -12,6 +12,7 @@ task.txt
 .springBeans
 .sts4-cache
 .idea
+.gradle
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
